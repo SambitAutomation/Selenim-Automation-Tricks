@@ -39,7 +39,16 @@ public class Pagination {
 				System.out.println(name);
 			}
 		}
+		int totalnames = names.size();
 		
+		System.out.println(totalnames);
+		
+		String printedNameOnScreen = driver.findElement(By.id("example_info")).getText().split(" ")[5];
+		
+		if(Integer.parseInt(printedNameOnScreen) == totalnames)
+		{
+			System.out.println("passed");
+		}
 
 	}
 
